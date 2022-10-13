@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AddCarComponent } from './add-car/add-car.component';
+import { AddUserCarComponent } from './add-user-car/add-user-car.component';
+import { AdminCarRetrieveComponent } from './admin-car-retrieve/admin-car-retrieve.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     LoginComponent,
     SignupComponent,
     UserdashboardComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    AddCarComponent,
+    AddUserCarComponent,
+    AdminCarRetrieveComponent
     
   ],
   imports: [

@@ -1,0 +1,17 @@
+<div>
+    <h1>Add Cars</h1>
+    <form [formGroup]="carRef" (ngSubmit)="storeCar()">
+        <label>CName</label>
+        <input type="text" formControlName="cname"><br/>
+        <label>CPrice</label>
+        <input type="number" formControlName="cprice"><br/>
+        <label>CModel</label>
+        <input type="Number" formControlName="cmodel"><br/>
+        <label>URL</label>
+        <input type="url" formControlName="url"><br/>
+        <input type="Submit" value="store Car"><br/>
+        <input type="reset" value="reset"><br/>
+    </form><br/>
+    <span style="color:red">{{storeMsg}}</span>>
+
+</div>

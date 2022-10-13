@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admindashboard',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admindashboard.component.css']
 })
 export class AdmindashboardComponent implements OnInit {
-  user:string = "";
-  constructor() { }
+  user:string ="";
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     let obj = sessionStorage.getItem("userDetails");
@@ -16,4 +17,9 @@ export class AdmindashboardComponent implements OnInit {
     }
   }
 
+  
+  logout() {
+    sessionStorage.removeItem("userDetails");
+    this.router.navigate(["login"]);
+  }
 }

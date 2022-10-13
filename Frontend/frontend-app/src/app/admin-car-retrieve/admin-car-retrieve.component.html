@@ -1,7 +1,22 @@
 <div>
-    <h1>Add Car Details</h1>
+    <h2>Add Car Details</h2>
+    <div *ngIf="flag">
+            <h2>Update Car</h2>
+            <form (ngSubmit)="updateDataFromDb()">
+                <label>CId</label>
+                <input type="number" name="cid" [(ngModel)]="cid" readonly/><br/>
+                <label>CPrice</label>
+                <input type="number" name="Cprice" [(ngModel)]="cprice"/><br/>
+                <label>URL</label>
+                <input type="URL" name="url" [(ngModel)]="url"/><br/>
+                <input type="submit" value="update data"/>
+                <input type="reset" value="reset"/>
+            </form>
+    </div>
     <span *ngFor="let c of cars">
         <img src={{c.url}} width="300px" height="300px"/>
-        <span>{{c.cname}} {{c.cprice}}</span>
-    </span> 
+        <span>{{c.cname}} {{c.cprice}} {{c.cmodel}}</span>
+        <input type="button" value="delete" (click)="deleteCar(c.cid)"/>
+        <input type="button" value="update" (click)="updateCar(c)"/>
+    </span>
 </div>

@@ -12,7 +12,7 @@ public class CarAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CarAppApplication.class, args);
-		System.out.println("server running on port number 8888");
+		System.out.println("server running on port number 9090");
 	}
 
 }
